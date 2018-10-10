@@ -1,5 +1,4 @@
-﻿Gender;Age;Weight;Height;Background;Hobby;Main Interest;Trasportation;Main Informatic Interest
-M;21;60;170;Managment Eng.;PS4;Music;On foot;Web security and privacy
+﻿M;21;60;170;Managment Eng.;PS4;Music;On foot;Web security and privacy
 M;24;85;185;Computer Eng.;PS4;Volleyball;Train;Ethical hacking
 M;21;69;175;Computer Eng.;Music;Computer;Bus;Ethical hacking
 M;24;61;170;Computer Eng.;Gaming;Football;Bus;Cryptography
@@ -39,5 +38,4 @@ M;22;75;183;Computer Eng.;Swimming;Soccer;Subway;Security
 M;22;89;196;Computer Eng.;Gaming;Basket;Bus;Hacking
 M;22;73;190;Computer Eng.;Gaming;Volleyball;Car;Hacking
 M;23;65;175;Computer Eng.;Gaming;Kick Boxing;Subway;Hacking
-M;21;71;178;Computer Science;Gaming;HipHop music and culture;Subway;Cyberwar
-;;;;;;;;
+M;21;71;178;Computer Science;Gaming;HipHop music and culture;Subway;Cyberwar;
