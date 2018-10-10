@@ -14,9 +14,19 @@ namespace Application2
 
     public partial class Form1 : Form
     {
+        private List<Person> buffer;
+        private FileManager file;
+        private ApplicationLogic application;
+
         public Form1()
         {
             InitializeComponent();
+            this.textBox1.Text = "";
+            this.textBox2.Text = "";
+
+            file        = new FileManager();
+            application = new ApplicationLogic();
+            buffer      = application.createDataBuffer(file);
             
         }
 
@@ -24,14 +34,8 @@ namespace Application2
         private void button1_Click(object sender, EventArgs e) {
             //Console.WriteLine("DEBUG: Button 1 pressed");//DEBUG
 
-            //Load file
-            FileManager file1 = new FileManager();
-
-            //Start calculation
-            ApplicationLogic application = new ApplicationLogic();
-
-            //Create and display the buffer
-            addDataText(application.createDataBuffer(file1));
+            //Display the buffer
+            addDataText(buffer);
 
         }
 
@@ -39,20 +43,10 @@ namespace Application2
 
         private void button2_Click(object sender, EventArgs e){
             //Console.WriteLine("DEBUG: Button 2 pressed");//DEBUG
-
-            //Load file
-            FileManager file1 = new FileManager();
-
-            //Start calculation
-            ApplicationLogic application = new ApplicationLogic();
             
             //Calculate frequency distribution
-            application.frequencyDistribution(application.createDataBuffer(file1));
+            this.textBox2.Text = application.frequencyDistribution(buffer);;
         }
-
-
-
-
 
 
         /*
@@ -60,9 +54,6 @@ namespace Application2
          */
         private void addDataText(List<Person> people)
         {
-            //Initialise Default text
-            this.textBox1.Text = "";
-
             //Add the proper text
             foreach (Person p in people)
             {
@@ -74,14 +65,7 @@ namespace Application2
         }
 
 
-        private void textBox1_TextChanged(object sender, EventArgs e) {
-        }
+        private void Form1_Load(object sender, EventArgs e) {}
 
-        private void TextBox2_TextChanged(object sender, EventArgs e) {
-        }
-
-        private void Form1_Load(object sender, EventArgs e) {
-
-        }
     }//Class
 }
