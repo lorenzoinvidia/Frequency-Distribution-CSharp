@@ -16,7 +16,9 @@ namespace Application2
 
         public FileManager()
         {
-            path = @"C:\Users\Lorenzo\Documents\GitHub\Application2\Application2\data-temp.csv";
+            string subPath = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.FullName;
+            //path = @"C:\Users\Lorenzo\Documents\GitHub\Application2\Application2\data-temp.csv";
+            path = subPath + "\\" + "data-temp.csv";
             fileExists = checkFilePath(path);
 
             //Read the file and append all the lines to a list
